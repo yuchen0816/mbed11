@@ -27,14 +27,14 @@ int main(){
    }
 
 
-   xbee.write("ATMY <Remote MY>\r\n", 12);
-   reply_messange(xbee_reply, "setting MY : <Remote MY>");
+   xbee.write("ATMY 0x240\r\n", 12);
+   reply_messange(xbee_reply, "setting MY : 0x240");
 
-   xbee.write("ATDL <Remote DL>\r\n", 12);
-   reply_messange(xbee_reply, "setting DL : <Remote DL>");
+   xbee.write("ATDL 0x140\r\n", 12);
+   reply_messange(xbee_reply, "setting DL : 0x140");
 
-   xbee.write("ATID <PAN ID>\r\n", 10);
-   reply_messange(xbee_reply, "setting PAN ID : <PAN ID>");
+   xbee.write("ATID 0x1\r\n", 10);
+   reply_messange(xbee_reply, "setting PAN ID : 0x1");
 
    xbee.write("ATWR\r\n", 6);
    reply_messange(xbee_reply, "write config");
